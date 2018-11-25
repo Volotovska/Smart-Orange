@@ -1,0 +1,37 @@
+{
+  "presets": [
+    "env",
+    [
+      "latest",
+      {
+        "es2015": {
+          "modules": false
+        }
+      }
+    ],
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    [
+      "transform-runtime", {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    }
+  }
+}
